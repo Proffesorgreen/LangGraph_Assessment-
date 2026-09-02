@@ -1,0 +1,59 @@
+# ── Secrets ──────────────────────────────────────────────────────────────
+.env
+
+# ── Virtual environment ───────────────────────────────────────────────────
+venv/
+
+# ── SQLite databases ──────────────────────────────────────────────────────
+# Generated at runtime — contains checkpointer state & customer data
+*.db
+*.db-shm
+*.db-wal
+
+# ── Python bytecode & caches ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# ── Distribution / packaging ──────────────────────────────────────────────
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+.eggs/
+MANIFEST
+
+# ── Test & coverage artifacts ─────────────────────────────────────────────
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+
+# ── Type checking ─────────────────────────────────────────────────────────
+.mypy_cache/
+.pytype/
+.pyre/
+
+# ── IDE & editor files ────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# ── OS noise ─────────────────────────────────────────────────────────────
+desktop.ini
+ehthumbs.db
