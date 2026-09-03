@@ -1,11 +1,12 @@
-# ── Secrets ──────────────────────────────────────────────────────────────
+# ── Secrets ───────────────────────────────────────────────────────────────
 .env
 
 # ── Virtual environment ───────────────────────────────────────────────────
 venv/
 
-# ── SQLite databases ──────────────────────────────────────────────────────
-# Generated at runtime — contains checkpointer state & customer data
+# ── SQLite databases & journal files ─────────────────────────────────────
+# Generated at runtime — contains checkpointer state & customer data.
+# The .db-shm and .db-wal files are SQLite WAL-mode journal artifacts.
 *.db
 *.db-shm
 *.db-wal
@@ -41,6 +42,17 @@ coverage.xml
 .pytype/
 .pyre/
 
+# ── Uvicorn / FastAPI ─────────────────────────────────────────────────────
+# Reload watchdog state
+.uvicorn_reload
+
+# ── Frontend build artifacts ──────────────────────────────────────────────
+# Uncomment these if you ever add a JS build step (npm/vite/webpack etc.)
+# frontend/node_modules/
+# frontend/dist/
+# frontend/.cache/
+# frontend/.parcel-cache/
+
 # ── IDE & editor files ────────────────────────────────────────────────────
 .vscode/
 .idea/
@@ -51,9 +63,9 @@ coverage.xml
 *.sw?
 *.sublime-project
 *.sublime-workspace
-.DS_Store
-Thumbs.db
 
 # ── OS noise ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
 desktop.ini
 ehthumbs.db
